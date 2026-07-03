@@ -23,7 +23,7 @@ This project is a **Gym Membership and Attendance Management System** developed 
 
 ## Technologies Used
 
-* Oracle Database
-* Oracle SQL Developer
-* SQL &
-* PL/SQL
+* Oracle Database.
+* Oracle SQL Developer.
+* SQL &.
+* PL/SQL.
