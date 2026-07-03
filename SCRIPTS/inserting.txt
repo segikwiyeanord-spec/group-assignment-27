@@ -1,0 +1,43 @@
+INSERT INTO Members VALUES
+(1,'John Smith','Male','0788000001',DATE '2026-01-10','Monthly');
+
+INSERT INTO Members VALUES
+(2,'Alice Uwase','Female','0788000002',DATE '2026-02-15','Quarterly');
+
+INSERT INTO Members VALUES
+(3,'Brian Peter','Male','0788000003',DATE '2026-03-01','Annual');
+
+COMMIT;
+
+
+INSERT INTO Trainers VALUES
+(1,'David','Weight Training');
+
+INSERT INTO Trainers VALUES
+(2,'Sarah','Yoga');
+
+COMMIT;
+
+
+
+
+INSERT INTO Attendance VALUES
+(1,1,1,SYSDATE-4,SYSDATE-4);
+
+INSERT INTO Attendance VALUES
+(2,1,1,SYSDATE-2,SYSDATE-2);
+
+INSERT INTO Attendance VALUES
+(3,2,2,SYSDATE-1,SYSDATE-1);
+
+INSERT INTO Attendance VALUES
+(4,3,1,SYSDATE,SYSDATE);
+
+COMMIT;
+
+
+
+
+
+
+
