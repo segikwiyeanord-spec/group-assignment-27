@@ -1,0 +1,27 @@
+CREATE OR REPLACE PROCEDURE RecordAttendance(
+
+    p_AttendanceID NUMBER,
+    p_MemberID NUMBER,
+    p_TrainerID NUMBER
+
+)
+IS
+BEGIN
+
+    INSERT INTO Attendance
+    VALUES(
+
+        p_AttendanceID,
+        p_MemberID,
+        p_TrainerID,
+        SYSDATE,
+        SYSDATE
+
+    );
+
+    COMMIT;
+
+    DBMS_OUTPUT.PUT_LINE('Attendance recorded successfully.');
+
+END;
+/
