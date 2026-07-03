@@ -1,0 +1,19 @@
+DECLARE
+    total_attendance NUMBER;
+BEGIN
+
+    SELECT COUNT(*)
+    INTO total_attendance
+    FROM Attendance
+    WHERE MemberID = 1;
+
+    IF total_attendance >= 3 THEN
+        DBMS_OUTPUT.PUT_LINE('Excellent attendance.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Needs more attendance.');
+    END IF;
+
+END;
+/
+
+
