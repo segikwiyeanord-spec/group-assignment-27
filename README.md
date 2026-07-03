@@ -25,5 +25,5 @@ This project is a **Gym Membership and Attendance Management System** developed 
 
 * Oracle Database
 * Oracle SQL Developer
-* SQL
+* SQL &
 * PL/SQL
