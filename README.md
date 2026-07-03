@@ -1,4 +1,4 @@
-# GYM Membership and Attendance Management System
+# GYM Membership  and Attendance Management System.
 
 ## Group Members
 
