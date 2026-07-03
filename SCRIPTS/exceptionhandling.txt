@@ -1,0 +1,34 @@
+CREATE OR REPLACE PROCEDURE FindMember(
+
+p_MemberID NUMBER
+
+)
+
+IS
+
+v_name Members.FullName%TYPE;
+
+BEGIN
+
+SELECT FullName
+
+INTO v_name
+
+FROM Members
+
+WHERE MemberID = p_MemberID;
+
+DBMS_OUTPUT.PUT_LINE('Member: ' || v_name);
+
+EXCEPTION
+
+WHEN NO_DATA_FOUND THEN
+
+DBMS_OUTPUT.PUT_LINE('Member does not exist.');
+
+WHEN OTHERS THEN
+
+DBMS_OUTPUT.PUT_LINE(SQLERRM);
+
+END;
+/
