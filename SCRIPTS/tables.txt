@@ -1,1 +1,37 @@
+CREATE TABLE Members (
+    MemberID NUMBER PRIMARY KEY,
+    FullName VARCHAR2(100) NOT NULL,
+    Gender VARCHAR2(10),
+    Phone VARCHAR2(15),
+    JoinDate DATE,
+    MembershipType VARCHAR2(30)
+);
+
+
+
+CREATE TABLE Trainers (
+    TrainerID NUMBER PRIMARY KEY,
+    TrainerName VARCHAR2(100),
+    Specialty VARCHAR2(50)
+);
+
+
+
+
+CREATE TABLE Attendance (
+    AttendanceID NUMBER PRIMARY KEY,
+    MemberID NUMBER,
+    TrainerID NUMBER,
+    AttendanceDate DATE,
+    CheckInTime DATE,
+
+    CONSTRAINT fk_member
+        FOREIGN KEY (MemberID)
+        REFERENCES Members(MemberID),
+
+    CONSTRAINT fk_trainer
+        FOREIGN KEY (TrainerID)
+        REFERENCES Trainers(TrainerID)
+);
+
 
