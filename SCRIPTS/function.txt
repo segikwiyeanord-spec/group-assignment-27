@@ -1,0 +1,26 @@
+CREATE OR REPLACE FUNCTION GetAttendanceCount(
+
+p_MemberID NUMBER
+
+)
+
+RETURN NUMBER
+
+IS
+
+v_total NUMBER;
+
+BEGIN
+
+SELECT COUNT(*)
+
+INTO v_total
+
+FROM Attendance
+
+WHERE MemberID = p_MemberID;
+
+RETURN v_total;
+
+END;
+/
