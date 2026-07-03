@@ -1,0 +1,23 @@
+SELECT
+
+m.MemberID,
+m.FullName,
+
+COUNT(a.AttendanceID) TotalVisits,
+
+RANK() OVER(
+
+ORDER BY COUNT(a.AttendanceID) DESC
+
+) AttendanceRank
+
+FROM Members m
+
+LEFT JOIN Attendance a
+
+ON m.MemberID = a.MemberID
+
+GROUP BY
+
+m.MemberID,
+m.FullName;
