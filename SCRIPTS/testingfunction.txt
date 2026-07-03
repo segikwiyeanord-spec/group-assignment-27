@@ -1,0 +1,2 @@
+SELECT GetAttendanceCount(1) AS TotalAttendance
+FROM dual;
